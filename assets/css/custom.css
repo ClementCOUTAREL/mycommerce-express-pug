@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+}
+
+.false-form {
+    background-color: transparent;
+    border: none;
+}

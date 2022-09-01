@@ -1,0 +1,17 @@
+extends includes/layout.pug
+
+block content 
+    h1 Products
+    ul
+        each product in products 
+            div.card
+                img(class="card-img-top w-100" src="/" + product.image alt=product.description)
+                h5=product.name
+                p=product.description
+                .card-footer
+                    form(action="/shop/products/edit/"+ product.id method="GET")
+                        input(type="hidden" name="_csrf" value=csrf ) 
+                        button Edit
+                    form(action="/shop/products/delete/" + product.id method="POST")
+                        input(type="hidden" name="_csrf" value=csrf ) 
+                        button Delete
